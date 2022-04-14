@@ -7,7 +7,19 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./images/df-favicon.png",
+      "32": "./images/df-favicon.png",
+      "48": "./images/df-favicon.png",
+      "128": "./images/df-favicon.png"
+    }
+  },
+  "icons": {
+    "16": "./images/df-favicon.png",
+    "32": "./images/df-favicon.png",
+    "48": "./images/df-favicon.png",
+    "128": "./images/df-favicon.png"
   },
   "permissions": ["storage"]
 }
