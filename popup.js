@@ -1,5 +1,5 @@
 const changeColor = document.getElementById("colorChange");
-const buttonOptions = docutment.getElementById("buttonDiv");
+const buttonOptions = document.getElementById("buttonDiv");
 const selectedClassName = "current";
 const buttonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
 
@@ -7,7 +7,7 @@ chrome.storage.sync.get("color", ({ color }) => {
   changeColor.style.backgroundColor = color;
 });
 
-function handleClick(event) {
+function handleButtonClick(event) {
   const current = event.target.parentElement.querySelector(
     `.${selectedClassName}`
   );
@@ -34,7 +34,7 @@ function constructOptions(buttonColors) {
         button.classList.add(selectedClassName);
       }
 
-      button.addEventListener("click", handleClick);
+      button.addEventListener("click", handleButtonClick);
       buttonOptions.appendChild(button);
     }
   });
